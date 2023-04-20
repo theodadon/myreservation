@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block navbar %}
+{% include 'navbar.html.twig' %}
+{% endblock %}
+{% block title %}Edit{% endblock %}
+
+{% block body %}
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Nom 
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Début
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fin
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Jour
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reservation in reservations %}
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ reservation.getSalleReservation().getNomSalle() }}
+                </th>
+                <td class="px-6 py-4">
+                    {{ reservation.getDateDebut()|date('H:i') }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ reservation.getDateFin() |date('H:i') }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ reservation.getDateDebut() |date('d-m-Y') }}
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="{{path('app_reservation_delete',{'id': reservation.getId()})}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

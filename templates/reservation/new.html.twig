@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block navbar %}
+{% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block title %}Nouvelle réservation{% endblock %}
+
+{% block body %}
+<!--centrer le form-->
+<div class="container flex justify-center">
+    <div class="flex items-center justify-center">
+    {{ form_start(form, {'method': 'POST', 'action': path('app_reservation_new_salle'), 'attr': {'class': 'flex flex-col gap-3'}}) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form.date) }}
+    {{ form_widget(form.salle_reservation) }}
+        
+    <button type="submit" class="btn btn-primary">Réserver</button>
+    {{ form_end(form) }}
+    </div>
+</div>
+    
+{% endblock %}
+

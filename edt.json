@@ -1,0 +1,27 @@
+{
+    "VCALENDAR": [
+      {
+        "VERSION": "2.0",
+        "PRODID;LANGUAGE=fr": "Copyright Index-Education - HYPERPLANNING 2023",
+        "METHOD": "PUBLISH",
+        "X-CALSTART": "20220815T000000Z",
+        "X-CALEND": "20230819T000000Z",
+        "X-WR-CALNAME;LANGUAGE=fr": "HYP - Dadon Théo 04/02/2003 (1126783540 - EdN - L2 SDN, <EdN - L2 SDN> <P_Classe Root> 3108392338 L2 SdN, <1126783540 - EdN - L2 SDN> <Options> 83540-6918284257 FGES-L2-s1-SDN-AN-B, <1126783540 - EdN - L2 SDN> <Options> 83540-7110758283 MO S1 Mythologies du bassin Méditerranéen, <1126783540 - EdN - L2 SDN> <Options> 83540-7307813664 MO S2 Games of Thrones, <1126783540 - EdN - L2 SDN> <Options> 83540-7307817253 Mo S2 Sociologie du conso) - du 15 août 2022 au 19 août 2023",
+        "X-WR-CALDESC;LANGUAGE=fr": "Emploi du temps de Dadon Théo 04/02/2003 généré par le logiciel HP (©INDEX ÉDUCATION) le 05 mars 2023 - INSTITUT CATHOLIQUE DE LILLE - valable sur la période du 15 août 2022 au 19 août 2023 - Semaines : semaine 33 - 33",
+        "VEVENT": [
+          {
+            "CATEGORIES": "HYPERPLANNING",
+            "DTSTAMP": "20230305T193548Z",
+            "LAST-MODIFIED": "20220711T101023Z",
+            "UID": "Cours-292874-4-Dadon_Theo-Index-Education",
+            "DTSTART": "20220905T083000Z",
+            "DTEND": "20220905T100000Z",
+            "SUMMARY;LANGUAGE=fr": "Rentrée",
+            "LOCATION;LANGUAGE=fr": "[Salle]",
+            "DESCRIPTION;LANGUAGE=fr": "",
+            "X-ALT-DESC;FMTTYPE=text/html": ""
+          }
+        ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block navbar %}
+{% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block body %}
+
+<main>
+    <section>
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voici votre email :</label>
+                            <p name="email" id="inputEmail" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com">{{ user.email }}</p>
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voici votre mot de passe:</label>
+                            <p name="password" id="inputPassword" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >{{user.password}}</p>
+                        </div>
+                        <div class="flex flex-col">
+                        <a href="{{ path('app_user_crud_index') }}" class="col"><button>back to list</button></a>
+                        <a href="{{ path('app_user_crud_edit', {'id': user.id}) }}"class="col"><button>edit</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+  
+
+{% endblock %}

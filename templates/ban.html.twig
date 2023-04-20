@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Access Denied{% endblock %}
+
+{% block body %}
+<div class="p-8 mx-auto my-4 bg-white rounded-lg shadow-md md:w-3/4 lg:w-1/2">
+    <h1 class="mb-4 text-2xl font-bold text-center text-red-500">Vous êtes banni!</h1>
+    <p class="mb-8 text-lg text-center text-gray-700">Désolé, vous avez été banni pour des raisons inconnues. Nous vous prions de ne pas essayer de vous connecter à nouveau.</p>
+    <img class="w-64 mx-auto mb-8" src="https://media.giphy.com/media/26BRyJGvZzYZWwQAw/giphy.gif" alt="Banni">
+    <a href="#" class="px-6 py-2 text-lg font-medium text-white bg-red-500 rounded hover:bg-red-600">Sortir d'ici</a>
+  </div>
+</div>
+{% endblock %}

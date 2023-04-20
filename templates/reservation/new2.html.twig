@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle réservation{% endblock %}
+{% block navbar %}
+{% include 'navbar.html.twig' %}
+{% endblock %}
+{% block body %}
+    <div class="flex flex-col items-center justify-center">
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form.horairedebut) }}
+    {{ form_widget(form.horairefin) }}
+
+    <button type="submit" class="btn py-3 border-solid border">Créer</button>
+    {% if finpris is defined and finpris is iterable %}
+    <div class="flex flex-col mx-auto h-1/2 bg-yellow my-2 border-2 border-gray-500 items-center justify-center">
+        <p>Voici les horaires déjà pris :</p>
+        <!--afficher sous forme $debutpris - $finpris-->
+        {% if finpris|length > 0 %}
+            {% for i in 0..debutpris|length - 1 %}
+                <p>{{ debutpris[i] }} - {{ finpris[i]|first|date('H:i') }} - {{ finpris[i]|last|date('H:i') }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endif %}
+
+    {{ form_end(form) }}
+</div>
+
+    <!--afficher les values de debutpris et finpris avec une boucle--> 
+
+    
+{% endblock %}

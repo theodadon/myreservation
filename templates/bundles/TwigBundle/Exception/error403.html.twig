@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Erreur 403{% endblock %}
+
+{% block body %}
+<div class="container flex justify-center">
+  <div class="flex items-center justify-center">
+    <div class="flex flex-col gap-3 justify-center items-center">
+    <h1>Erreur 403</h1>
+    <p>Vous n'avez pas les droits pour accéder à cette page.</p>
+    <a href="{{path('app_login')}}" class="btn btn-primary border-solid border-2 border-sky-500">Retour à l'accueil</a>
+  </div>
+</div>
+</div>
+{% endblock %}
